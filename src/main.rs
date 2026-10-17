@@ -359,11 +359,7 @@ async fn fetch_status(client: &reqwest::Client, token: &str) -> anyhow::Result<S
     Ok(resp.json().await?)
 }
 
-async fn chat(
-    client: &reqwest::Client,
-    token: &str,
-    message: &str,
-) -> anyhow::Result<ChatOut> {
+async fn chat(client: &reqwest::Client, token: &str, message: &str) -> anyhow::Result<ChatOut> {
     let (_, out): (_, ChatOut) = post(
         client,
         token,
