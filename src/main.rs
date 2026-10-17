@@ -403,6 +403,9 @@ async fn run_status() -> anyhow::Result<()> {
 async fn run_chat(words: &[String]) -> anyhow::Result<()> {
     let client = http_client()?;
     let token = require_token().await?;
+    if words.join(" ").trim().is_empty() {
+        return show_status(&client, &token).await;
+    }
     provision(&client, &token).await?;
     let out = chat(&client, &token, &words.join(" ")).await?;
     println!("{}", out.response.trim_end());
