@@ -434,7 +434,7 @@ async fn main() -> anyhow::Result<()> {
                     "version": env!("CARGO_PKG_VERSION"),
                     "protocol": "1.1",
                     "tools": [],
-                    "description": "connect",
+                    "description": "connect this terminal to your gray cloud machine",
                     "commands": [],
                     "completion": ["connect", "status", "logout"],
                 })
