@@ -434,6 +434,7 @@ async fn main() -> anyhow::Result<()> {
                     "version": env!("CARGO_PKG_VERSION"),
                     "protocol": "1.1",
                     "tools": [],
+                    "description": "connect",
                     "commands": [],
                     "completion": ["connect", "status", "logout"],
                 })
